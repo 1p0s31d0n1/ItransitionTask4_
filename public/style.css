@@ -1,0 +1,33 @@
+* {box-sizing: border-box}
+
+.container {
+    padding: 30px;
+}
+
+input[type=email], input[type=password], input[type=text] {
+    width: 100%;
+    padding: 10px;
+    margin: 0 0 5px 0;
+    display: inline-block;
+    border: none;
+    background: #bed5d1;
+}
+
+hr {
+    border: 1px solid #d5d5d5;
+}
+
+.RegisterFormBtn {
+    background-color: #37575b;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.FormText {
+    border-radius: 20px;
+
+}

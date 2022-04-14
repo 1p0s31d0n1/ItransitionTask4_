@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html id="Registration">
+<head>
+    <meta charset="utf-8" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <form class="RegisterForm" name="RegisterForm" method="post" action="/register">
+                <h1>Registration</h1>
+                <hr>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter email" name="email" class = "FormText" id="REmail" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter name" name="name" class = "FormText" id="RegisterName" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter password" name="password" class = "FormText" id="RegisterPassword" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Repeat password</label>
+                    <input type="password" placeholder="Repeat password" name="confirmPassword" class = "FormText" id="RegisterConfirmPassword" required>
+                </div>
+
+                {{#if passwordWrong}}
+                    <p style="color: red">Password doesnt match!</p>
+                {{/if}}
+
+                {{#if emailExists}}
+                    <p style="color: red">This email is already used!</p>
+                {{/if}}
+
+                <hr>
+
+                <button class="RegisterFormBtn btn-block">Register</button>
+
+                <label><code>Already have an account? <a href="/">Sign in</a></code></label>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
